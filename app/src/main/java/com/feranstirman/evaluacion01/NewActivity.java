@@ -74,6 +74,13 @@ public class NewActivity extends AppCompatActivity {
 
             String informacion = "{username: }";
 
+            Intent shareIntent = new Intent();
+            shareIntent.setType("text/plain");
+            shareIntent.putExtra(Intent.EXTRA_TEXT,informacion);
+            shareIntent.setAction("SEND");
+            startActivity(shareIntent);
+
+
         });
     }
 }
